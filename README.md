@@ -1,44 +1,50 @@
 # BrewAMP - another way to get a nice Apache PHP MySQL OSX environment
 
-This script installs Apache, MySQL, PHP and Adminer they way I like it the most.
+To get a easy to install local development environment with Homebrew.
 
 ## !! Atention
 
 * this script will mess up any existing brew apache installation
-* it will maybe disable the default apache
-* it installs everything in /LocalSites/ outside of your Users Folder - not every Unix Admin likes that
+* a globaly accessible /LocalSites/ folder will be created
+* configuration files will be changed automatically
 
 ## How to use
 
-More details in src/index.html
-
-Install homebrew first - it's not working without it: http://brew.sh/
+Run the script on your Terminal:
 
 ````bash
  bash install.sh
 ````
 
+It will install brew, apache, dnsmasq, mysql, php, fastcgi, adminer, xdebug and other helpful things.
+
+Run multiple sites in /LocalSites/xyz and open them in your browser http://xyz.dev:8080/.
+
 ## credits
 
-This took a lot from an amazing tutorial by Anlan https://twitter.com/alanthing (follow him you must)
+Initial version by Jonas Felix - Follow to get more OpenSource: https://twitter.com/wingsuitist
+
+The basic workflow of the installation is based on the great tutorial from Alan: https://twitter.com/alanthing
 https://echo.co/blog/os-x-1010-yosemite-local-development-environment-apache-php-and-mysql-homebrew
 
-The first version was written by me - Follow me on Twitter to get more fun stuff: https://twitter.com/wingsuitist
 
 ## debugging
 
+### brew error messages
+
+````bash
+brew doctor
+````
+
 ### apache not running
 
+````bash
 httpd --DEFOREGROUND
+````
 
 
 ### compile errors
 
+````bash
 use brew doctor and read carefully
-
-
-### permissions brew
-
-If you installed brew with sudo you'll get a lot of Errors about permissions, so set back the permission:
-sudo chown -R $(whoami):admin /usr/local
-
+````
