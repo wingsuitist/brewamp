@@ -36,7 +36,7 @@ else
   echo "<?php phpinfo() ?>" >> /LocalSites/phpinfo/phpinfo.php
 fi
 
-if [ -e $(brew --prefix)/etc/php/5.5/conf.d/ext-xdebug.ini]; then
+if [ -e $(brew --prefix)/etc/php/5.5/conf.d/ext-xdebug.ini ]; then
     tell "xdebug is already giving you the wisdom of debugging"
 else
     tell "let's get the wisdom of debugging"
