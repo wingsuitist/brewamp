@@ -27,6 +27,16 @@ The first version was written by me - Follow me on Twitter to get more fun stuff
 
 ## debugging
 
+### apache not running
+
+httpd --DEFOREGROUND
+
+
+### compile errors
+
+use brew doctor and read carefully
+
+
 ### permissions brew
 
 If you installed brew with sudo you'll get a lot of Errors about permissions, so set back the permission:
