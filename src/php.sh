@@ -36,6 +36,21 @@ else
   echo "<?php phpinfo() ?>" >> /LocalSites/phpinfo/phpinfo.php
 fi
 
+if [ -e $(brew --prefix)/etc/php/5.5/conf.d/ext-xdebug.ini]; then
+    tell "xdebug is already giving you the wisdom of debugging"
+else
+    tell "let's get the wisdom of debugging"
+    brew install php55-xdebug
+    cat >> $(brew --prefix)/etc/php/5.5/conf.d/ext-xdebug.ini <<EOF
+xdebug.remote_enable=on
+xdebug.remote_log="/var/log/xdebug.log"
+xdebug.remote_host=localhost
+xdebug.remote_handler=dbgp
+xdebug.remote_port=9001
+EOF
+
+fi
+
 brew services stop httpd22
 brew services start httpd22
 
