@@ -1,4 +1,4 @@
-if (grep adminer ); then
+if (grep adminer /LocalSites/httpd-vhosts.conf); then
   tell "adminer seams to be there so let's celebrate and use it"
 else
   tell "install the database interface cause someone is maybe to lazy for the commandline"
