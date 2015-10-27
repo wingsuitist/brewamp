@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <h1>Welcomo to BrewAMP</h1>
+    <p>
+      Thank you <a href="https://twitter.com/alanthing" target="_wisdom">Alan</a> for his
+            <a href="https://echo.co/blog/os-x-1010-yosemite-local-development-environment-apache-php-and-mysql-homebrew" target="_blank">
+              amazing OSX Brew apache / php tutorial
+            </a>
+      <br />
+      <br />
+      Follow me on Twitter to get more fun stuff:
+        <a href="https://twitter.com/wingsuitist" target="_outerspace">Wingsuitist</a>
+    </p>
+    <h2>Usage:</h2>
+    <p>
+      use your terminal:
+    </p>
+    <pre>
+      # list services
+      brew services list
+
+      # restart / start / stop services
+      brew services restart httpd22
+
+      # edit your php.ini
+      open /usr/local/etc/php/5.5/php.ini
+
+      # local apache config
+      open /LocalSites/httpd-vhosts.conf
+
+      # log files
+      open /LocalSites/logs
+
+      # create new website
+      mkdir /LocalSites/FirstWebsite
+      echo "<h1> my first site </h1>" >> /LocalSites/FirstWebsite/index.html
+      open "http://FirstWebsite.dev:8080/"
+
+      # manage databases => I hope you remember the password you set
+      open "http://localhost:8080/adminer"
+    </pre>
+  </body>
+</html>
