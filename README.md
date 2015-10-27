@@ -1,4 +1,6 @@
-# Install Apache MySQL PHP Environment locally
+# BrewAMP - another way to get a nice Apache PHP MySQL OSX environment
+
+This script installs Apache, MySQL, PHP and Adminer they way I like it the most.
 
 ## !! Atention
 
@@ -8,6 +10,17 @@
 
 ## How to use
 
+More details in src/index.html
+
+Install homebrew first - it's not working without it: http://brew.sh/
+
 ````bash
  bash install.sh
 ````
+
+## credits
+
+This took a lot from an amazing tutorial by Anlan https://twitter.com/alanthing (follow him you must)
+https://echo.co/blog/os-x-1010-yosemite-local-development-environment-apache-php-and-mysql-homebrew
+
+The first version was written by me - Follow me on Twitter to get more fun stuff: https://twitter.com/wingsuitist
