@@ -24,3 +24,11 @@ This took a lot from an amazing tutorial by Anlan https://twitter.com/alanthing 
 https://echo.co/blog/os-x-1010-yosemite-local-development-environment-apache-php-and-mysql-homebrew
 
 The first version was written by me - Follow me on Twitter to get more fun stuff: https://twitter.com/wingsuitist
+
+## debugging
+
+### permissions brew
+
+If you installed brew with sudo you'll get a lot of Errors about permissions, so set back the permission:
+sudo chown -R $(whoami):admin /usr/local
+
