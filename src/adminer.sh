@@ -2,7 +2,7 @@ if (grep adminer ); then
   tell "adminer seams to be there so let's celebrate and use it"
 else
   tell "install the database interface cause someone is maybe to lazy for the commandline"
-  brew install adminer  --with-brewed-httpd22
+  brew install adminer  --with-brewed-httpd24
 
   # add it to our config
   cat >> /LocalSites/httpd-vhosts.conf <<EOF
@@ -21,8 +21,9 @@ else
  </Directory>
 EOF
 
-  brew services stop httpd22
-  brew services start httpd22
+  brew services stop httpd24
+  brew services start httpd24
 fi
 
 open "http://localhost:8080/adminer/" &
+

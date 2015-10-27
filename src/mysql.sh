@@ -3,6 +3,8 @@
 if [ -e $(brew --prefix)/etc/my.cnf ]; then
   tell "The Deamon of MySQL is installed - you may summon it by brew services"
 else
+  brew link makedepend
+  
   brew install -v mysql
 
   cp -v $(brew --prefix mysql)/support-files/my-default.cnf $(brew --prefix)/etc/my.cnf

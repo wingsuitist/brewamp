@@ -12,13 +12,13 @@ else
   # let's kill some time
   (sleep 5; tell "The brewery is slow today please give it a little time.")&
 
-  # install apache 2.2
-  brew install -v homebrew/apache/httpd22 --with-brewed-openssl --with-mpm-event
+  # install apache 2.4
+  brew install -v homebrew/apache/httpd24 --with-brewed-openssl --with-mpm-event
 fi
 
 # install fastcgi
 tell "now let's open the door for the indian to connect with the heavens of script interpreters"
-brew install -v homebrew/apache/mod_fastcgi --with-brewed-httpd22
+brew install -v homebrew/apache/mod_fastcgi --with-brewed-httpd24
 
 # creat /LocalSites folders
 if [ -d /LocalSites ]; then
@@ -32,15 +32,15 @@ else
 fi
 
   # if our new apache snipped is not yet in the config, we have to remove the defualt fastcgi
-if (grep brewamp $(brew --prefix)/etc/apache2/2.2/httpd.conf); then
+if (grep brewamp $(brew --prefix)/etc/apache2.4.2/httpd.conf); then
   tell "the brew is already in your amp"
 else
   tell "some custom configuration we must do my friend"
 
-  sed -i '' '/fastcgi_module/d' $(brew --prefix)/etc/apache2/2.2/httpd.conf
+  sed -i '' '/fastcgi_module/d' $(brew --prefix)/etc/apache2.4.2/httpd.conf
 
   export MODFASTCGIPREFIX=$(brew --prefix mod_fastcgi)
-  cat >> $(brew --prefix)/etc/apache2/2.2/httpd.conf <<EOF
+  cat >> $(brew --prefix)/etc/apache2.4.2/httpd.conf <<EOF
 
 # custom settings brewamp
 
@@ -208,6 +208,6 @@ tell "Dear darkest of valleys o summon my Apache so the deamon of port 80 80 com
 tell "learn how to use it"
 cp $BASEDIR/src/index.html /LocalSites/
 
-brew services stop httpd22
-brew services start httpd22
+brew services stop httpd24
+brew services start httpd24
 open "http://localhost:8080/" &

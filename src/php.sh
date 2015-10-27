@@ -51,7 +51,7 @@ EOF
 
 fi
 
-brew services stop httpd22
-brew services start httpd22
+brew services stop httpd24
+brew services start httpd24
 
 open "http://phpinfo.dev:8080/phpinfo.php" &
