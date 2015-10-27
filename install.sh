@@ -18,6 +18,7 @@ tell "Let's go on the journey through forests, over  \
 brew tap homebrew/services
 
 # include mysql installation
+source $BASEDIR/src/brew.sh
 source $BASEDIR/src/mysql.sh
 source $BASEDIR/src/httpd.sh
 source $BASEDIR/src/dnsmasq.sh
