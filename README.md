@@ -41,10 +41,3 @@ brew doctor
 ````bash
 httpd --DEFOREGROUND
 ````
-
-
-### compile errors
-
-````bash
-use brew doctor and read carefully
-````
